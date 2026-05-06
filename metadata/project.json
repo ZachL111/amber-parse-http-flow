@@ -1,0 +1,32 @@
+{
+  "index": 298,
+  "phase": 2,
+  "batch": 34,
+  "name": "amber-parse-http-flow",
+  "planned_name": "amber-parse-http-flow",
+  "language": "Ruby",
+  "category": "Parsers",
+  "goal": "Implement a Ruby parsers project for http format conversion, using round-trip fixtures and lossless normalization checks.",
+  "repository_url": "https://github.com/ZachL111/amber-parse-http-flow",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 150,
+    "risk_penalty": 5,
+    "latency_penalty": 2,
+    "weight_bonus": 6,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}

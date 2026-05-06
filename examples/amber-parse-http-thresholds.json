@@ -1,0 +1,17 @@
+{
+  "repo": "amber-parse-http-flow",
+  "thresholds": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 4,
+    "ship": 209,
+    "watch": 97
+  },
+  "terms": [
+    "token drift",
+    "grammar width",
+    "label quality",
+    "error locality"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "repo": "amber-parse-http-flow",
+  "language": "Ruby",
+  "category": "Parsers",
+  "goal": "Implement a Ruby parsers project for http format conversion, using round-trip fixtures and lossless normalization checks.",
+  "review_model": {
+    "terms": [
+      "token drift",
+      "grammar width",
+      "label quality",
+      "error locality"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "token drift",
+      "signal": 60,
+      "slack": 54,
+      "drag": 16,
+      "confidence": 47,
+      "score": 173,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "grammar width",
+      "signal": 76,
+      "slack": 46,
+      "drag": 12,
+      "confidence": 58,
+      "score": 220,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "label quality",
+      "signal": 80,
+      "slack": 21,
+      "drag": 11,
+      "confidence": 48,
+      "score": 196,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "error locality",
+      "signal": 89,
+      "slack": 26,
+      "drag": 9,
+      "confidence": 58,
+      "score": 235,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "token drift",
+      "signal": 67,
+      "slack": 40,
+      "drag": 8,
+      "confidence": 48,
+      "score": 198,
+      "lane": "ship"
+    }
+  ]
+}
